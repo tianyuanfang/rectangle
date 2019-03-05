@@ -4,7 +4,7 @@
   "description": "矩形计算器",
   "main": "rectangle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "grunt lint"
   },
   "repository": {
     "type": "git",
