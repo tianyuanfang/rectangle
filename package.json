@@ -4,7 +4,7 @@
   "description": "矩形计算器",
   "main": "rectangle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "grunt && grunt unitTest && grunt minify"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,13 @@
   },
   "homepage": "https://github.com/tianyuanfang/rectangle#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
     "grunt": "^1.0.3",
     "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
     "grunt-eslint": "^21.0.0",
     "grunt-htmlhint": "^0.9.13",
-    "grunt-mocha": "^1.2.0",
-    "mocha": "^6.0.2"
+    "grunt-mocha": "^1.2.0"
   }
 }
