@@ -4,7 +4,7 @@
   "description": "矩形计算器",
   "main": "rectangle.js",
   "scripts": {
-    "test": "grunt lint && grunt unitTest"
+    "test": "grunt unitTest"
   },
   "repository": {
     "type": "git",

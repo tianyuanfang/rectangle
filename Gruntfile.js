@@ -61,4 +61,4 @@ module.exports=function(grunt){
   grunt.registerTask('lint',['htmlhint','csslint','eslint']);
   grunt.registerTask('unitTest', ['mocha']);
   grunt.registerTask('minify', ['htmlmin', 'cssmin', 'uglify']);
-}
+};
