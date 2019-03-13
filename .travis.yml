@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-    - "node"
+    - "6"
 
 after_script:
     - grunt release
@@ -13,5 +13,5 @@ after_script:
     - git push --force --quiet "https://${ACC_TOKEN}@${GH_REF}" master:${BRANCH}
 
 branches:
-    only:
-          - master
+  only:
+    - master
