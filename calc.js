@@ -36,7 +36,7 @@ function validate(data) {
   }
 
   if(Number(data) < 0) {
-    result.reason = '必须大于零';
+    result.reason = '必须大于或等于零';
     return result;
   }
 
