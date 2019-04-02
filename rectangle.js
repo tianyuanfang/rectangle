@@ -7,7 +7,37 @@ $(function() {
       $widthValidate = $('#width-validate'),
       $heightValidate = $('#height-validate'),
       isPassValidate = false;
+  
+  $width.keypress(function(e){
+    if(/[abcdf-zABCDF-Z`~!@#$%^&*()=_+[\]{}|;:'",<>/?\\]/.test(e.key)){
+      e.preventDefault();
+    }
 
+    if(e.key=='.'){
+      if(e.target.value=='')  e.preventDefault();
+      if(e.target.value.indexOf('.')!=-1){
+        e.preventDefault();
+      } else{
+        if(e.target.selectionStart==0) e.preventDefault();
+      }
+    }
+  });
+
+  $height.keypress(function(e){
+    if(/[abcdf-zABCDF-Z`~!@#$%^&*()=_+[\]{}|;:'",<>/?\\]/.test(e.key)){
+      e.preventDefault();
+    }
+
+    if(e.key=='.'){
+      if(e.target.value=='')  e.preventDefault();
+      if(e.target.value.indexOf('.')!=-1){
+        e.preventDefault();
+      } else{
+        if(e.target.selectionStart==0) e.preventDefault();
+      }
+    }
+  });
+  
   $width.focusout(function() {
     var result = validate($width.val());
     isPassValidate = result.isOK;
@@ -29,7 +59,7 @@ $(function() {
       $heightValidate.html('');
     }
   });
-
+  
   $btnCal.click(function(){
     if(!isPassValidate) return;
 
